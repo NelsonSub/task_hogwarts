@@ -43,8 +43,17 @@ def pytest_collection_modifyitems(session, config, items: List):
         print(dir(item))
         item.name = item.name.encode('utf-8').decode('unicode-escape')
         item._nodeid = item.nodeid.encode('utf-8').decode('unicode-escape')
-# def pytest_addoption(parser,pluginmanager):
-#     parser.addoption("--env",  ##注册一个命令行选项
-#                      default="store",
-#                      dest="env",
-#                      help="set test run env")
+def pytest_addoption(parser,pluginmanager):
+    parser.addoption("--env",  ##注册一个命令行选项
+                     default="dev",
+                     help="set test run env")
+
+
+def test_env(request):
+    env = request.config.getoption('env')
+    if env == 'dev':
+        print('test run env is develop')
+    elif env == 'sit':
+        print('test run env is sit')
+    else:
+        print('env is error')
