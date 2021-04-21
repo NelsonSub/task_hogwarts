@@ -30,3 +30,9 @@ class Contacts:
         names = self.driver.find_elements(By.CSS_SELECTOR,'#member_list  td:nth-child(2)')
 
         return names
+
+class ContactsPage:
+
+    def get_member_list(self):
+
+        return

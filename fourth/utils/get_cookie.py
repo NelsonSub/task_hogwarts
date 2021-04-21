@@ -11,13 +11,9 @@ def get_cookie():
     driver.implicitly_wait(5)
     cookie = driver.get_cookies()
 
-    with open("data.yaml", "w", encoding="UTF-8") as f:
+    with open("cookie_data.yaml", "w", encoding="UTF-8") as f:
         yaml.dump(cookie, f)
 
-
-
 get_cookie()
-
-
 
 

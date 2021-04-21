@@ -17,7 +17,7 @@ class ContactsAdd:
 
     def contactssave(self):
         self.driver.find_element(By.CSS_SELECTOR, 'a.qui_btn.ww_btn.js_btn_save').click()
-        sleep(4)
+        sleep(10)
 
 
 
