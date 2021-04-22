@@ -4,10 +4,12 @@ from selenium import webdriver
 import yaml
 import os
 
+from selenium.webdriver.remote.webdriver import WebDriver
+
 
 class Base:
 
-    def __init__(self, base_driver: webdriver = None):
+    def __init__(self, base_driver: WebDriver = None):
         """
         driver 重复实例化会 导致页面启动多次
         解决driver 重复实例化的问题
@@ -40,6 +42,7 @@ class Base:
         '''
         if ele is None:
             return self.driver.find_element(*by)
+
         else:
             return self.driver.find_element(by,ele)
     def finds(self, by, ele=None):
