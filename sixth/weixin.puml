@@ -1,0 +1,35 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+participant 企业微信主页面 as main
+
+participant 通讯录页面 as contact
+
+participant 添加成员页面 as add_member
+
+participant 编辑成员页面 as edit_member
+
+participant 成员信息页面 as member_info
+
+participant 成员信息设置页面 as member_info_set
+
+participant 成员信息设置编辑页面  as member_info_edit
+
+main -> contact: 点击通讯录按钮
+contact -> add_member: 点击添加成员
+add_member->edit_member: 点击手动输入添加
+edit_member -> add_member: 1、输入姓名\n 2、输入手机号码\n 3、点击保存
+
+contact ->member_info: 点击成员
+member_info ->member_info_set: 点击右上角的三个点
+member_info_set->member_info_edit: 点击编辑成员
+
+member_info_edit-> contact: 点击删除成员按钮，弹窗点击确定
+
+
+
+
+
+@enduml
