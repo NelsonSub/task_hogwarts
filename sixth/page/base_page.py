@@ -2,16 +2,26 @@
 from appium.webdriver.common.mobileby import MobileBy
 from appium.webdriver.webdriver import WebDriver
 from selenium.common.exceptions import NoSuchElementException
+import logging
+import os
+# logging.basicConfig(level=logging.INFO)
 
 
 class Base_Page:
+    # _logfile = os.path.join(os.path.abspath(os.path.dirname(os.getcwd())), r'log\test.log')
+    # _LOG_FORMAT = "%(asctime)s - %(levelname)s - %(funcName)s - %(lineno)d - %(message)s"
+    # logging.basicConfig(filename=_logfile,
+    #                     filemode="a",
+    #                     level=logging.INFO,
+    #                     format=_LOG_FORMAT)
+    # # logging.basicConfig(level=logging.INFO)
 
-    def __init__(self,driver: WebDriver = None):
+    def __init__(self, driver: WebDriver = None):
         self.driver = driver
 
     def find(self, by, value):
-        # logging.info(by)
-        # logging.info(value)
+        logging.info(by)
+        logging.info(value)
 
         # 查找元素
         return self.driver.find_element(by, value)
@@ -29,7 +39,7 @@ class Base_Page:
                 # 如果找到了这个元素，则返回
                 return element
             except NoSuchElementException:
-                print("未找到，滑动")
+                logging.info("未找到，滑动")
                 # 滑动一页，继续查找
                 size = self.driver.get_window_size()
                 # self.driver.get_window_rect()

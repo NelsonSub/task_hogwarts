@@ -6,12 +6,13 @@ class TestWechat:
 
     def setup_class(self):
         self.app = App()
+        self.name = '张三'
+        self.mobile = '12321541245'
 
     def setup(self):
         # 启动 app
         self.main = self.app.start().goto_main()
-        self.name = '张三'
-        self.mobile = '12321541245'
+
 
     def setdown(self):
         self.app.stop()
