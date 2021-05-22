@@ -1,0 +1,6 @@
+DEBUG    urllib3.connectionpool:connectionpool.py:971 Starting new HTTPS connection (1): qyapi.weixin.qq.com:443
+DEBUG    urllib3.connectionpool:connectionpool.py:452 https://qyapi.weixin.qq.com:443 "GET /cgi-bin/gettoken?corpid=wwad05060ccd4f4927&corpsecret=0Ev7ALYmv9XmmVeBmiDp4m7fyQjVQnp4Ti-piLIkOMo HTTP/1.1" 200 277
+DEBUG    urllib3.connectionpool:connectionpool.py:971 Starting new HTTPS connection (1): qyapi.weixin.qq.com:443
+DEBUG    urllib3.connectionpool:connectionpool.py:452 https://qyapi.weixin.qq.com:443 "POST /cgi-bin/externalcontact/get_corp_tag_list?access_token=GNrNePYk65Qgklx7Entgg4xarL0BZ5DrRh-n7AbT0LlBmDhah_c9s728u7M4HG9khuXKoncCkRkrB03XtzRVMH_rSB2-QaKBqQr3BIAtYUuHJXLhsQa9Tqa_SXDbbwCeyEa6ZHOrJUaIDPE6H0h4SM7RJkleQzzNf7tM12K-3C3fSpF7CclD2eh5QblnACZrw7bK06OrvlmCF8FBQCDpFQ HTTP/1.1" 200 641
+DEBUG    urllib3.connectionpool:connectionpool.py:971 Starting new HTTPS connection (1): qyapi.weixin.qq.com:443
+DEBUG    urllib3.connectionpool:connectionpool.py:452 https://qyapi.weixin.qq.com:443 "POST /cgi-bin/externalcontact/del_corp_tag?access_token=GNrNePYk65Qgklx7Entgg4xarL0BZ5DrRh-n7AbT0LlBmDhah_c9s728u7M4HG9khuXKoncCkRkrB03XtzRVMH_rSB2-QaKBqQr3BIAtYUuHJXLhsQa9Tqa_SXDbbwCeyEa6ZHOrJUaIDPE6H0h4SM7RJkleQzzNf7tM12K-3C3fSpF7CclD2eh5QblnACZrw7bK06OrvlmCF8FBQCDpFQ HTTP/1.1" 200 27
