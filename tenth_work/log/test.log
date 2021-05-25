@@ -1,0 +1,137 @@
+INFO     root:base_api.py:45 接口请求为： {
+  "url": "https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=wwad05060ccd4f4927&corpsecret=7aREEpYKf4brOl3QiolyUcLc4QQUCkZjoSbCTyiI9-s",
+  "header": {
+    "User-Agent": "python-requests/2.25.1",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive"
+  },
+  "method": "GET"
+}
+INFO     root:base_api.py:46 接口响应为： {
+  "status_code": 200,
+  "header": {
+    "User-Agent": "python-requests/2.25.1",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive"
+  },
+  "data": {
+    "errcode": 0,
+    "errmsg": "ok",
+    "access_token": "ZXhbtLiDA50qhlcplbElPfje8XIxVuKB3mx-6znMue_OmWDIstLB8-Dmic2dW0078DRvB5ygJddqu0xMdxXKI7w-FM2K6byLBc2oDnhLdHHTDxM7sHKMAXTuHDTMs75xylBIxsHAXJCKCcA9svyfcTndyH4PzJILkN_Upagn8GeaQiYe_nXN9Qizld6P8eevQdkl9pCwdcvGqpzolMLY6g",
+    "expires_in": 7200
+  }
+}
+INFO     root:base_api.py:45 接口请求为： {
+  "url": "https://qyapi.weixin.qq.com/cgi-bin/user/create?access_token=ZXhbtLiDA50qhlcplbElPfje8XIxVuKB3mx-6znMue_OmWDIstLB8-Dmic2dW0078DRvB5ygJddqu0xMdxXKI7w-FM2K6byLBc2oDnhLdHHTDxM7sHKMAXTuHDTMs75xylBIxsHAXJCKCcA9svyfcTndyH4PzJILkN_Upagn8GeaQiYe_nXN9Qizld6P8eevQdkl9pCwdcvGqpzolMLY6g",
+  "header": {
+    "User-Agent": "python-requests/2.25.1",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Length": "107",
+    "Content-Type": "application/json"
+  },
+  "method": "POST",
+  "data": "\"{\\\"userid\\\": \\\"testLI\\\", \\\"name\\\": \\\"test\\u9648\\u7433\\\", \\\"department\\\": [1], \\\"mobile\\\": \\\"18779308530\\\", \\\"email\\\": null}\""
+}
+INFO     root:base_api.py:46 接口响应为： {
+  "status_code": 200,
+  "header": {
+    "User-Agent": "python-requests/2.25.1",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Length": "107",
+    "Content-Type": "application/json"
+  },
+  "data": {
+    "errcode": 0,
+    "errmsg": "created"
+  }
+}
+INFO     root:base_api.py:45 接口请求为： {
+  "url": "https://qyapi.weixin.qq.com/cgi-bin/user/get?access_token=ZXhbtLiDA50qhlcplbElPfje8XIxVuKB3mx-6znMue_OmWDIstLB8-Dmic2dW0078DRvB5ygJddqu0xMdxXKI7w-FM2K6byLBc2oDnhLdHHTDxM7sHKMAXTuHDTMs75xylBIxsHAXJCKCcA9svyfcTndyH4PzJILkN_Upagn8GeaQiYe_nXN9Qizld6P8eevQdkl9pCwdcvGqpzolMLY6g&userid=testLI",
+  "header": {
+    "User-Agent": "python-requests/2.25.1",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Length": "2",
+    "Content-Type": "application/json"
+  },
+  "method": "GET",
+  "data": "\"{}\""
+}
+INFO     root:base_api.py:46 接口响应为： {
+  "status_code": 200,
+  "header": {
+    "User-Agent": "python-requests/2.25.1",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Length": "2",
+    "Content-Type": "application/json"
+  },
+  "data": {
+    "errcode": 0,
+    "errmsg": "ok",
+    "userid": "testLI",
+    "name": "test陈琳",
+    "department": [
+      1
+    ],
+    "position": "",
+    "mobile": "18779308530",
+    "gender": "0",
+    "email": "",
+    "avatar": "",
+    "status": 4,
+    "isleader": 0,
+    "extattr": {
+      "attrs": []
+    },
+    "telephone": "",
+    "enable": 1,
+    "hide_mobile": 0,
+    "order": [
+      0
+    ],
+    "main_department": 1,
+    "qr_code": "https://open.work.weixin.qq.com/wwopen/userQRCode?vcode=vcca6f7b9233828f69",
+    "alias": "",
+    "is_leader_in_dept": [
+      0
+    ],
+    "thumb_avatar": ""
+  }
+}
+INFO     root:base_api.py:45 接口请求为： {
+  "url": "https://qyapi.weixin.qq.com/cgi-bin/user/delete?access_token=ZXhbtLiDA50qhlcplbElPfje8XIxVuKB3mx-6znMue_OmWDIstLB8-Dmic2dW0078DRvB5ygJddqu0xMdxXKI7w-FM2K6byLBc2oDnhLdHHTDxM7sHKMAXTuHDTMs75xylBIxsHAXJCKCcA9svyfcTndyH4PzJILkN_Upagn8GeaQiYe_nXN9Qizld6P8eevQdkl9pCwdcvGqpzolMLY6g&userid=testLI",
+  "header": {
+    "User-Agent": "python-requests/2.25.1",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Length": "2",
+    "Content-Type": "application/json"
+  },
+  "method": "GET",
+  "data": "\"{}\""
+}
+INFO     root:base_api.py:46 接口响应为： {
+  "status_code": 200,
+  "header": {
+    "User-Agent": "python-requests/2.25.1",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Length": "2",
+    "Content-Type": "application/json"
+  },
+  "data": {
+    "errcode": 0,
+    "errmsg": "deleted"
+  }
+}
