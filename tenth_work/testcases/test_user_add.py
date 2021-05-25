@@ -25,12 +25,11 @@ class TestUser:
         mobile = self.fake_data.get_phonenum()
         with allure.step("添加新用户"):
             result = self.user.create(userid, name, department, mobile)
-            allure.attach(json.dumps(result,indent=2,ensure_ascii=False), attachment_type=allure.attachment_type.TEXT)
+
             assert result.get('status_code') == 200
             assert result.get('data').get('errcode') == 0
         with allure.step("查询已添加的用户进行断言"):
             get_result = self.user.get(userid)
-            allure.attach(json.dumps(get_result, indent=2, ensure_ascii=False), attachment_type=allure.attachment_type.TEXT)
             assert get_result.get('status_code') == 200
             assert get_result.get('data').get('errcode') == 0
             assert get_result.get('data').get('mobile') == mobile

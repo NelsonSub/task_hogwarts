@@ -1,6 +1,7 @@
 # -*- coding:UTF-8 -*-
 import logging
 
+import allure
 import requests
 import json
 from tenth_work.common.config import loadConfig
@@ -28,13 +29,14 @@ class BaseApi:
                 base_url = loadConfig('common','base_url')
                 url = base_url + data.get('url')
                 data["url"] = url
-        print(data)
+
         r = requests.request(**data)
         request_data = {
             "url": r.request.url,
             "header": dict(r.request.headers),
             "method": r.request.method,
         }
+        allure.attach(json.dumps(request_data, indent=2, ensure_ascii=False), attachment_type=allure.attachment_type.TEXT)
         if r.request.body:
             request_data['data'] = json.dumps(r.request.body.decode('unicode_escape'))
         response_data = {
@@ -42,6 +44,8 @@ class BaseApi:
             "header": dict(r.request.headers),
             "data": r.json()
         }
+        allure.attach(json.dumps(response_data, indent=2, ensure_ascii=False),
+                      attachment_type=allure.attachment_type.TEXT)
         logging.info(f'接口请求为： {json.dumps(request_data, indent=2, ensure_ascii=False)}')
         logging.info(f'接口响应为： {json.dumps(response_data, indent=2, ensure_ascii=False)}')
         return response_data
